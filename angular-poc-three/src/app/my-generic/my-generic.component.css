@@ -1,0 +1,18 @@
+.border-success{
+  border : 1px solid green;
+  padding : 0;
+  height: 411px;
+}
+
+.border-warning{
+  border : 1px solid yellow;
+  padding : 0;
+}
+
+ul{
+  margin-bottom: 0;
+}
+
+li{
+  background-color: skyblue;
+}

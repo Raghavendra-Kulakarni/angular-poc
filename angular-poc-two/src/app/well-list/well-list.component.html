@@ -1,0 +1,22 @@
+<div class="container">
+  <app-well [sourceKey]="sourceKey" (addWell)="onAdd($event)"></app-well>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let well of wells">
+        <td class="font-brown">{{well.name}}</td>
+        <td [ngStyle]="{color : (well.type === 'rls') ? 'red' : 'black'}"
+            [ngClass]="(well.type === 'rls') ? 'background-green' : 'background-pink'"
+        >{{well.type}}</td>
+        <td class="font-brown" (click) = "onSelect($event)" style="cursor: pointer;">{{well.sourceKey}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>User Details</h2>
+  <table class="table table-bordered">
+    <thead class="bg-primary">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users;">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Toggle content using ngIf</h2>
+  <p *ngIf="flag;else elsePart">If Condition displaying</p>
+  <button type="button" (click)="onClick()" class="btn btn-primary">Click to toggle</button>
+  <ng-template #elsePart>
+    <p>Else Condition displaying</p>
+  </ng-template>
+</div>
